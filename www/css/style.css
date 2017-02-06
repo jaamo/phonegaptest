@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:500");
+nav {
+  font-family: Ubuntu;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+nav .upper, nav .lower {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+}
+nav .upper {
+  top: 0;
+  bottom: 50%;
+  background: #1F3E7C;
+}
+nav .lower {
+  top: 50%;
+  bottom: 0;
+  background: #555759;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+nav ul li {
+  padding: 0;
+  margin: 0;
+  transform: rotate(4deg);
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+nav ul li a {
+  display: block;
+  text-align: center;
+  line-height: 25vh;
+  font-size: 2rem;
+  transform: rotate(-4deg);
+}
+nav ul li:nth-child(1) {
+  background: #1F3E7C;
+  color: white;
+}
+nav ul li:nth-child(2) {
+  background: #92243D;
+  color: black;
+}
+nav ul li:nth-child(3) {
+  background: #ffffff;
+  color: black;
+}
+nav ul li:nth-child(4) {
+  background: #555759;
+  color: white;
+}
+
+.container {
+  position: absolute;
+  background: #92243D;
+  left: 0;
+  right: 0;
+  top: 25vh;
+  bottom: 75vh;
+  z-index: 3;
+  transition: all 400ms ease-out;
+}
+
+#container1 {
+  background-color: #1F3E7C;
+}
+#container1.container--opened {
+  background-color: white;
+}
+
+#container2 {
+  background-color: #92243D;
+}
+#container2.container--opened {
+  background-color: white;
+}
+
+#container3 {
+  background-color: #ffffff;
+}
+#container3.container--opened {
+  background-color: white;
+}
+
+#container4 {
+  background-color: #555759;
+}
+#container4.container--opened {
+  background-color: white;
+}
+
+.container--opening {
+  top: 0vh;
+  bottom: 0vh;
+}
+
+.hamburger {
+  position: absolute;
+  visibility: hidden;
+  width: 3rem;
+  height: 3rem;
+  right: 1rem;
+  top: 1rem;
+  z-index: 4;
+}
+.hamburger .bar1, .hamburger .bar2, .hamburger .bar3 {
+  background: white;
+  position: absolute;
+  height: 0.6rem;
+  width: 3rem;
+  transition: all 400ms ease-out;
+  top: 1.2rem;
+}
+
+.hamburger--open {
+  visibility: visible;
+}
+.hamburger--open .bar1, .hamburger--open .bar2, .hamburger--open .bar3 {
+  background: black;
+}
+.hamburger--open .bar1 {
+  top: 0;
+}
+.hamburger--open .bar2 {
+  top: 1.2rem;
+}
+.hamburger--open .bar3 {
+  top: 2.4rem;
+}
